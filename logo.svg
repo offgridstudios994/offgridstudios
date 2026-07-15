@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="OFFGRD STUDIO">
+  <!-- OFFGRD STUDIO mark — equalizer bars. To restyle: change the fill colour
+       or the y/height of each <rect> (bars are centred on y=20). Swap this whole
+       file to use your own logo; it's referenced as logo.svg in index.html. -->
+  <rect x="4"  y="16" width="5" height="8"  rx="2.5" fill="#d59a4e"/>
+  <rect x="12" y="10" width="5" height="20" rx="2.5" fill="#d59a4e"/>
+  <rect x="20" y="4"  width="5" height="32" rx="2.5" fill="#d59a4e"/>
+  <rect x="28" y="13" width="5" height="14" rx="2.5" fill="#d59a4e"/>
+</svg>
