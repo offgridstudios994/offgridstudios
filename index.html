@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OFFGRD STUDIO · Beirut Music Conservatory</title>
-<meta name="description" content="OFFGRD STUDIO — a Beirut conservatory for Arabic and Western music. Oud, piano, qanun, guitar, voice. Book a trial lesson." />
+<title>OFFGRD STUDIO · Electronic Music &amp; DJ School — Mar Mikhael, Beirut</title>
+<meta name="description" content="OFFGRD STUDIO — an electronic music and DJ school in Mar Mikhael, Beirut. Turntables, controllers, production and synthesis. Book a trial lesson." />
 <link rel="icon" href="logo.svg" type="image/svg+xml" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,7 @@
 <style>
   :root{
     --night:#14100e; --stage:#1e1815; --paper:#f3ead9;
-    --brass:#d59a4e; --oud:#a24a35; --verd:#3a6b64;
+    --brass:#d59a4e; --rust:#a24a35; --verd:#3a6b64;
     --ink:#14100e;
     --paper-dim:rgba(243,234,217,.66);
     --paper-faint:rgba(243,234,217,.42);
@@ -56,12 +56,6 @@
   .btn-ghost:hover{border-color:var(--brass); color:var(--brass)}
   .btn svg{width:16px;height:16px}
 
-  /* demo ribbon */
-  .ribbon{
-    background:repeating-linear-gradient(45deg,var(--oud),var(--oud) 12px,#8f4030 12px,#8f4030 24px);
-    color:var(--paper); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; font-weight:600;
-    text-align:center; padding:.5em 1em;
-  }
   .ph-flag{
     position:absolute; top:10px; left:10px; z-index:2;
     background:rgba(20,16,14,.82); color:var(--brass); border:1px solid var(--brass);
@@ -143,18 +137,18 @@
 
   /* PROCESS (light section) */
   .process{background:var(--paper); color:var(--ink)}
-  .process .eyebrow{color:var(--oud)}
+  .process .eyebrow{color:var(--rust)}
   .process .shead p{color:rgba(20,16,14,.66)}
   .steps{margin-top:calc(var(--sy)*.5); display:grid; gap:0}
   .step{display:grid; grid-template-columns:auto 1fr auto; gap:clamp(18px,4vw,56px); align-items:start; padding:clamp(24px,3.4vw,42px) 0; border-top:1px solid rgba(20,16,14,.16); transition:opacity .4s ease}
   .step:last-child{border-bottom:1px solid rgba(20,16,14,.16)}
-  .step .idx{font-family:var(--display); font-size:clamp(1.6rem,3vw,2.4rem); color:var(--oud); font-weight:500; font-variant-numeric:tabular-nums}
+  .step .idx{font-family:var(--display); font-size:clamp(1.6rem,3vw,2.4rem); color:var(--rust); font-weight:500; font-variant-numeric:tabular-nums}
   .step h3{font-size:clamp(1.4rem,2.6vw,2rem); font-weight:600}
   .step p{margin-top:.6rem; color:rgba(20,16,14,.7); max-width:52ch}
   .step .tick{width:26px;height:26px;border-radius:50%;border:2px solid rgba(20,16,14,.2); display:grid; place-items:center; margin-top:.4rem; transition:all .4s ease}
   .step.active{opacity:1}
   .step:not(.active){opacity:.5}
-  .step.active .tick{background:var(--oud); border-color:var(--oud)}
+  .step.active .tick{background:var(--rust); border-color:var(--rust)}
   .step.active .tick svg{opacity:1}
   .step .tick svg{width:13px;height:13px;opacity:0;color:var(--paper);transition:opacity .3s}
   @media(max-width:640px){ .step{grid-template-columns:auto 1fr; } .step .tick{display:none} }
@@ -168,26 +162,26 @@
   .card{background:var(--stage); border:1px solid var(--hair); border-radius:12px; padding:clamp(20px,2.4vw,28px); min-height:180px; display:flex; flex-direction:column; justify-content:space-between; transition:border-color .3s ease, transform .3s ease, background .3s ease}
   .card:hover{border-color:var(--brass); transform:translateY(-4px)}
   .card .tag{font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700; padding:.3em .6em; border-radius:20px; align-self:flex-start}
-  .tag.ar{color:var(--brass); background:rgba(213,154,78,.12)}
-  .tag.we{color:var(--verd); background:rgba(58,107,100,.16)}
+  .tag.dj{color:var(--brass); background:rgba(213,154,78,.12)}
+  .tag.pr{color:var(--verd); background:rgba(58,107,100,.16)}
   .card h3{font-size:1.5rem; margin-top:auto; font-weight:600}
-  .card .ar-name{color:var(--paper-faint); font-size:.95rem; margin-top:.25rem}
+  .card .card-sub{color:var(--paper-faint); font-size:.95rem; margin-top:.25rem}
 
   /* CONTACT (light) */
   .contact{background:var(--paper); color:var(--ink)}
-  .contact .eyebrow{color:var(--oud)}
+  .contact .eyebrow{color:var(--rust)}
   .contact-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:clamp(32px,6vw,80px); margin-top:calc(var(--sy)*.5); align-items:start}
   @media(max-width:820px){ .contact-grid{grid-template-columns:1fr} }
   .contact h2{font-size:clamp(2.2rem,5vw,3.6rem)}
   .contact-lead{margin-top:1.1rem; color:rgba(20,16,14,.7); max-width:42ch}
   .contact-meta{margin-top:2rem; display:flex; flex-direction:column; gap:1rem}
   .cm-row{display:flex; gap:.8em; align-items:center; color:rgba(20,16,14,.8); font-weight:500}
-  .cm-row svg{width:18px;height:18px;color:var(--oud);flex:none}
+  .cm-row svg{width:18px;height:18px;color:var(--rust);flex:none}
   .form{background:#fff; border:1px solid rgba(20,16,14,.12); border-radius:16px; padding:clamp(22px,3vw,34px); box-shadow:0 20px 50px -30px rgba(20,16,14,.5)}
   .field{margin-bottom:16px}
   .field label{display:block; font-size:.8rem; font-weight:600; letter-spacing:.04em; margin-bottom:.4em; color:rgba(20,16,14,.75)}
   .field input,.field select,.field textarea{width:100%; font-family:var(--body); font-size:1rem; padding:.85em 1em; border:1px solid rgba(20,16,14,.2); border-radius:10px; background:#fbf7ef; color:var(--ink); transition:border-color .2s}
-  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--oud); outline:none}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--rust); outline:none}
   .form .btn-primary{width:100%; justify-content:center; margin-top:6px; color:var(--paper)}
   .form-fine{font-size:.72rem; color:rgba(20,16,14,.5); margin-top:14px; text-align:center}
 
@@ -209,7 +203,7 @@
     .sig-mission{opacity:1 !important}
     .sig-label{opacity:0 !important}
     .step:not(.active){opacity:1}
-    .step .tick{background:var(--oud); border-color:var(--oud)}
+    .step .tick{background:var(--rust); border-color:var(--rust)}
     .step .tick svg{opacity:1}
   }
 </style>
@@ -217,7 +211,6 @@
 <body>
 
 <header id="hdr">
-  <div class="ribbon">⚠ Demo mockup · placeholder content · not a real business</div>
   <div class="bar">
     <a href="#top" class="brand"><img src="logo.svg" alt="" class="brand-mark" /> OFFGRD STUDIO</a>
     <nav class="nav">
@@ -236,9 +229,9 @@
     <svg class="hero-wave" id="heroWave" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true"></svg>
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="wrap">
-      <div class="hero-eyebrow"><span class="dot"></span><span class="eyebrow">Beirut, Lebanon · Arabic &amp; Western music</span></div>
-      <h1>Where Beirut <em>learns to play.</em></h1>
-      <p class="lead">A conservatory for the oud and the piano alike — one-to-one lessons, ensembles and recitals, taught one student at a time.</p>
+      <div class="hero-eyebrow"><span class="dot"></span><span class="eyebrow">Mar Mikhael, Beirut · Electronic Music &amp; DJing</span></div>
+      <h1>Where Beirut <em>learns to mix.</em></h1>
+      <p class="lead">A studio for DJs and producers alike — one-to-one lessons on decks and synths, studio sessions and live sets, taught one student at a time.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Book a trial lesson
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -253,12 +246,12 @@
   <section class="sig" id="signature">
     <div class="cut-stage">
       <div class="sig-label" id="sigLabel">
-        <div class="sig-count"><span id="voiceCount">1</span><small id="voiceWord">string</small></div>
+        <div class="sig-count"><span id="voiceCount">1</span><small id="voiceWord">signal</small></div>
       </div>
       <svg class="sig-svg" id="sigSvg" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true"></svg>
       <div class="sig-mission" id="sigMission">
-        <h2>One string. <em>Then an orchestra.</em></h2>
-        <p>Every musician here started with a single note. We stay with you for all the rest.</p>
+        <h2>One signal. <em>Then a set.</em></h2>
+        <p>Every DJ here started with a single track. We stay with you through every drop after that.</p>
       </div>
     </div>
   </section>
@@ -268,22 +261,22 @@
     <div class="wrap">
       <div class="shead reveal">
         <span class="eyebrow">Life at OFFGRD STUDIO</span>
-        <h2>Lessons that end in a recital, not a certificate.</h2>
-        <p>Students of every age and level share one stage each term — from a first-week beginner to the ensemble that closes the night.</p>
+        <h2>Lessons that end in a live set, not a certificate.</h2>
+        <p>Students of every age and level share one booth each term — from a first-week beginner to the DJ who closes the night.</p>
       </div>
 
       <div class="stats reveal">
-        <div class="stat"><div class="n">14</div><div class="l">instruments &amp; disciplines taught<sup> *sample</sup></div></div>
-        <div class="stat"><div class="n">3</div><div class="l">languages of instruction — Arabic, English, French<sup> *sample</sup></div></div>
-        <div class="stat"><div class="n">2</div><div class="l">recitals every term, open to family<sup> *sample</sup></div></div>
+        <div class="stat"><div class="n">12</div><div class="l">decks, synths &amp; production tools taught<sup> *sample</sup></div></div>
+        <div class="stat"><div class="n">2</div><div class="l">fully-equipped studio floors, open for practice<sup> *sample</sup></div></div>
+        <div class="stat"><div class="n">2</div><div class="l">showcase nights every term, open to the public<sup> *sample</sup></div></div>
       </div>
 
       <div class="gallery">
-        <figure class="gcell a reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Vintage stage microphone under warm concert lighting" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=900&q=70&auto=format&fit=crop" /></figure>
-        <figure class="gcell b reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Grand piano keys close up" src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=700&q=70&auto=format&fit=crop" /></figure>
-        <figure class="gcell c reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Young student learning classical guitar" src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=560&q=70&auto=format&fit=crop" /></figure>
-        <figure class="gcell d reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Violin resting on sheet music" src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=560&q=70&auto=format&fit=crop" /></figure>
-        <figure class="gcell e reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Singer performing on a small stage under warm light" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=560&q=70&auto=format&fit=crop" /></figure>
+        <figure class="gcell a reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="DJ mixing on CDJs under red and purple club lighting" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=900&q=70&auto=format&fit=crop" /></figure>
+        <figure class="gcell b reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Crowd dancing under colorful stage lighting" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=700&q=70&auto=format&fit=crop" /></figure>
+        <figure class="gcell c reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="DJ wearing headphones performing at a club" src="https://images.unsplash.com/photo-1516873240891-4bf014598ab4?w=560&q=70&auto=format&fit=crop" /></figure>
+        <figure class="gcell d reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Close-up of a DJ mixer and turntables lit in neon" src="https://images.unsplash.com/photo-1594623930572-300a3011d9ae?w=560&q=70&auto=format&fit=crop" /></figure>
+        <figure class="gcell e reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Crowd with hands raised in a haze of stage smoke" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=560&q=70&auto=format&fit=crop" /></figure>
       </div>
     </div>
   </section>
@@ -293,23 +286,23 @@
     <div class="wrap">
       <div class="shead reveal">
         <span class="eyebrow">How to start</span>
-        <h2>Three steps from curious to playing.</h2>
+        <h2>Three steps from curious to your first set.</h2>
         <p>No audition, no prior experience. Just one lesson to see if it fits — the rest follows your pace.</p>
       </div>
       <div class="steps" id="steps">
         <div class="step" data-step>
           <div class="idx">01</div>
-          <div><h3>Book a trial</h3><p>Pick a time that suits you. One 45-minute lesson on the instrument you're curious about — no commitment, no fee to enrol.</p></div>
+          <div><h3>Book a trial</h3><p>Pick a time that suits you. One 45-minute lesson on the deck or DAW you're curious about — no commitment, no fee to enrol.</p></div>
           <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
         </div>
         <div class="step" data-step>
           <div class="idx">02</div>
-          <div><h3>Meet your teacher</h3><p>We match you to a tutor by instrument, level and language — Arabic, English or French — so the first lesson already feels like the right one.</p></div>
+          <div><h3>Meet your teacher</h3><p>We match you to a tutor by style, level and gear — turntablism, controllers, production — so the first lesson already feels like the right one.</p></div>
           <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
         </div>
         <div class="step" data-step>
           <div class="idx">03</div>
-          <div><h3>Find your rhythm</h3><p>Weekly lessons, termly recitals, and a place in an ensemble when you're ready to play alongside others.</p></div>
+          <div><h3>Find your rhythm</h3><p>Weekly lessons, termly showcases, and a back-to-back slot in the crew when you're ready to play alongside others.</p></div>
           <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
         </div>
       </div>
@@ -323,18 +316,18 @@
     <div class="wrap">
       <div class="shead reveal">
         <span class="eyebrow">Programmes</span>
-        <h2>Two traditions, one school.</h2>
-        <p>Arabic and Western instruments taught side by side — many students learn one of each.</p>
+        <h2>Two paths, one booth.</h2>
+        <p>Turntables and production taught side by side — many students learn both.</p>
       </div>
       <div class="cards">
-        <article class="card reveal"><span class="tag ar">Arabic</span><h3>Oud</h3><div class="ar-name">العود</div></article>
-        <article class="card reveal"><span class="tag ar">Arabic</span><h3>Qanun</h3><div class="ar-name">القانون</div></article>
-        <article class="card reveal"><span class="tag ar">Arabic</span><h3>Ney</h3><div class="ar-name">الناي</div></article>
-        <article class="card reveal"><span class="tag ar">Arabic</span><h3>Arabic Voice</h3><div class="ar-name">الغناء الشرقي</div></article>
-        <article class="card reveal"><span class="tag we">Western</span><h3>Piano</h3><div class="ar-name">البيانو</div></article>
-        <article class="card reveal"><span class="tag we">Western</span><h3>Guitar</h3><div class="ar-name">الغيتار</div></article>
-        <article class="card reveal"><span class="tag we">Western</span><h3>Violin</h3><div class="ar-name">الكمان</div></article>
-        <article class="card reveal"><span class="tag we">Western</span><h3>Music Theory</h3><div class="ar-name">النظريات الموسيقية</div></article>
+        <article class="card reveal"><span class="tag dj">DJing</span><h3>Turntablism</h3><div class="card-sub">Vinyl, scratching &amp; blends</div></article>
+        <article class="card reveal"><span class="tag dj">DJing</span><h3>Open-Format DJing</h3><div class="card-sub">Reading a room, genre to genre</div></article>
+        <article class="card reveal"><span class="tag dj">DJing</span><h3>Controllerism</h3><div class="card-sub">Pads, loops &amp; live remixing</div></article>
+        <article class="card reveal"><span class="tag dj">DJing</span><h3>Set Building</h3><div class="card-sub">Structuring a night start to finish</div></article>
+        <article class="card reveal"><span class="tag pr">Production</span><h3>Ableton Live</h3><div class="card-sub">Beat-making &amp; arrangement</div></article>
+        <article class="card reveal"><span class="tag pr">Production</span><h3>Sound Design</h3><div class="card-sub">Building your own patches</div></article>
+        <article class="card reveal"><span class="tag pr">Production</span><h3>Synthesis</h3><div class="card-sub">Analog &amp; software synths</div></article>
+        <article class="card reveal"><span class="tag pr">Production</span><h3>Mixing &amp; Mastering</h3><div class="card-sub">Getting a track club-ready</div></article>
       </div>
     </div>
   </section>
@@ -345,27 +338,27 @@
       <div class="contact-grid">
         <div class="reveal">
           <span class="eyebrow">Book a trial</span>
-          <h2>Come and play a first note.</h2>
+          <h2>Come and play your first set.</h2>
           <p class="contact-lead">Tell us who's learning and what you're drawn to. We'll reply on WhatsApp with a couple of trial times within the day.</p>
           <div class="contact-meta">
             <div class="cm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.9-.9L3 20l1-4.1A8.4 8.4 0 1 1 21 11.5Z"/></svg><span>WhatsApp +961 71 610 379</span></div>
-            <div class="cm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.4-7-11a7 7 0 0 1 14 0c0 5.6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Gemmayzeh, Beirut <em style="opacity:.55">· placeholder</em></span></div>
+            <div class="cm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.4-7-11a7 7 0 0 1 14 0c0 5.6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Mar Mikhael, Beirut <em style="opacity:.55">· placeholder</em></span></div>
             <div class="cm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg><span>hello@offgrdstudio.example <em style="opacity:.55">· placeholder</em></span></div>
           </div>
         </div>
 
         <form class="form reveal" id="trialForm">
-          <div class="field"><label for="who">Who's learning?</label><input id="who" name="who" placeholder="e.g. my daughter (9), or myself" /></div>
-          <div class="field"><label for="inst">Instrument you're drawn to</label>
+          <div class="field"><label for="who">Who's learning?</label><input id="who" name="who" placeholder="e.g. my son (17), or myself" /></div>
+          <div class="field"><label for="inst">What are you drawn to?</label>
             <select id="inst" name="inst">
-              <option>Oud</option><option>Qanun</option><option>Ney</option><option>Arabic Voice</option>
-              <option>Piano</option><option>Guitar</option><option>Violin</option><option>Music Theory</option><option>Not sure yet</option>
+              <option>Turntablism</option><option>Open-Format DJing</option><option>Controllerism</option><option>Set Building</option>
+              <option>Ableton Live</option><option>Sound Design</option><option>Synthesis</option><option>Mixing &amp; Mastering</option><option>Not sure yet</option>
             </select>
           </div>
-          <div class="field"><label for="lang">Preferred language</label>
-            <select id="lang" name="lang"><option>Arabic</option><option>English</option><option>French</option></select>
+          <div class="field"><label for="level">Experience level</label>
+            <select id="level" name="level"><option>New to this</option><option>Some experience</option><option>Confident, ready to push further</option></select>
           </div>
-          <div class="field"><label for="note">Anything we should know? (optional)</label><textarea id="note" name="note" rows="2" placeholder="Absolute beginner, plays a little, weekends only…"></textarea></div>
+          <div class="field"><label for="note">Anything we should know? (optional)</label><textarea id="note" name="note" rows="2" placeholder="Absolute beginner, own controller, weekends only…"></textarea></div>
           <button type="submit" class="btn btn-primary">Send on WhatsApp
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <p class="form-fine">Opens WhatsApp with your message pre-filled — you press send. Demo number.</p>
@@ -380,15 +373,15 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand"><img src="logo.svg" alt="" class="foot-mark" /> OFFGRD STUDIO</div>
-        <p class="lead" style="margin-top:1rem; font-size:1rem; max-width:34ch; color:var(--paper-dim)">Beirut's conservatory for Arabic and Western music.</p>
+        <p class="lead" style="margin-top:1rem; font-size:1rem; max-width:34ch; color:var(--paper-dim)">Mar Mikhael's studio for DJing and electronic music.</p>
       </div>
       <div class="foot-links">
         <div class="foot-col"><h4>School</h4>
           <a href="#signature">The idea</a><a href="#programmes">Programmes</a><a href="#process">How to start</a></div>
         <div class="foot-col"><h4>Visit</h4>
-          <a href="#contact">Book a trial</a><a href="#contact">Recitals</a><a href="#contact">Find us</a></div>
+          <a href="#contact">Book a trial</a><a href="#contact">Showcases</a><a href="#contact">Find us</a></div>
         <div class="foot-col"><h4>Follow</h4>
-          <a href="#contact">Instagram</a><a href="#contact">WhatsApp</a><a href="#contact">YouTube</a></div>
+          <a href="#contact">Instagram</a><a href="#contact">WhatsApp</a><a href="#contact">SoundCloud</a></div>
       </div>
     </div>
     <div class="foot-base">
@@ -416,9 +409,9 @@
     e.preventDefault();
     const who = (document.getElementById('who').value||'').trim() || 'someone new';
     const inst = document.getElementById('inst').value;
-    const lang = document.getElementById('lang').value;
+    const level = document.getElementById('level').value;
     const note = (document.getElementById('note').value||'').trim();
-    let msg = `Hi OFFGRD STUDIO! I'd like to book a trial lesson.%0A• For: ${who}%0A• Instrument: ${inst}%0A• Language: ${lang}`;
+    let msg = `Hi OFFGRD STUDIO! I'd like to book a trial lesson.%0A• For: ${who}%0A• Interested in: ${inst}%0A• Level: ${level}`;
     if(note) msg += `%0A• Note: ${note}`;
     window.open(`https://wa.me/96171610379?text=${msg}`, '_blank', 'noopener');
   });
@@ -435,15 +428,15 @@
     return d;
   }
 
-  // Voice layers for the signature (a plucked string -> ensemble)
+  // Signal layers for the signature (a single track -> a full set)
   const VOICES = [
-    {c:'#d59a4e', freq:2.4, w:3.2},   // brass string
-    {c:'#a24a35', freq:3.6, w:2.4},   // oud
+    {c:'#d59a4e', freq:2.4, w:3.2},   // brass
+    {c:'#a24a35', freq:3.6, w:2.4},   // rust
     {c:'#3a6b64', freq:5.0, w:2.2},   // verdigris
     {c:'#f3ead9', freq:7.0, w:1.8},   // ivory
     {c:'#d59a4e', freq:9.0, w:1.5},   // brass high
   ];
-  const VOICE_WORDS = ['string','voices','voices','voices','voices'];
+  const VOICE_WORDS = ['signal','layers','layers','layers','layers'];
 
   function buildLayers(svg, count){
     const NS='http://www.w3.org/2000/svg';
