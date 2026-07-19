@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>OFFGRD STUDIO · Electronic Music &amp; DJ School — Mar Mikhael, Beirut</title>
-<meta name="description" content="OFFGRD STUDIO — an electronic music and DJ school in Mar Mikhael, Beirut. Turntables, controllers, production and synthesis. Book a trial lesson." />
+<title>OFFGRD STUDIOS · Electronic Music &amp; DJ School — Mar Mikhael, Beirut</title>
+<meta name="description" content="OFFGRD STUDIOS — an electronic music and DJ school in Mar Mikhael, Beirut. Turntables, controllers, production and synthesis. Book a trial lesson." />
 <link rel="icon" href="logo.svg" type="image/svg+xml" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,12 +13,12 @@
 
 <style>
   :root{
-    --night:#14100e; --stage:#1e1815; --paper:#f3ead9;
-    --brass:#d59a4e; --rust:#a24a35; --verd:#3a6b64;
-    --ink:#14100e;
-    --paper-dim:rgba(243,234,217,.66);
-    --paper-faint:rgba(243,234,217,.42);
-    --hair:rgba(243,234,217,.14);
+    --night:#070b16; --stage:#101a2c; --paper:#eef3fb;
+    --blue:#3aa8ff; --indigo:#5865f0; --cyan:#22c9d6; --sky:#8ecbff;
+    --ink:#070b16;
+    --paper-dim:rgba(238,243,251,.66);
+    --paper-faint:rgba(238,243,251,.42);
+    --hair:rgba(238,243,251,.14);
     --sy:clamp(72px,11vw,140px);          /* single vertical-rhythm token */
     --wrap:1200px;
     --display:"Fraunces",Georgia,serif;
@@ -35,30 +35,30 @@
   p{margin:0}
   a{color:inherit}
   img{max-width:100%; display:block}
-  ::selection{background:var(--brass); color:var(--night)}
-  :focus-visible{outline:2px solid var(--brass); outline-offset:3px; border-radius:2px}
+  ::selection{background:var(--blue); color:var(--night)}
+  :focus-visible{outline:2px solid var(--blue); outline-offset:3px; border-radius:2px}
 
   .wrap{max-width:var(--wrap); margin-inline:auto; padding-inline:clamp(20px,5vw,48px)}
   .section{padding-block:var(--sy)}
-  .eyebrow{font-size:.72rem; letter-spacing:.28em; text-transform:uppercase; font-weight:600; color:var(--brass)}
+  .eyebrow{font-size:.72rem; letter-spacing:.28em; text-transform:uppercase; font-weight:600; color:var(--blue)}
   .lead{font-size:clamp(1.05rem,1.6vw,1.3rem); color:var(--paper-dim); max-width:46ch}
 
   /* buttons */
   .btn{
     display:inline-flex; align-items:center; gap:.6em; font-weight:600; font-size:.98rem;
     padding:.95em 1.5em; border-radius:100px; text-decoration:none; cursor:pointer;
-    border:1px solid transparent; transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+    border:1px solid transparent; transition:transform .25s cubic-bezier(.2,.8,.2,1), background .25s ease, color .25s ease, border-color .25s ease;
     min-height:48px;
   }
-  .btn-primary{background:var(--brass); color:var(--night)}
-  .btn-primary:hover{transform:translateY(-2px); background:#e6ad61}
+  .btn-primary{background:var(--blue); color:var(--night)}
+  .btn-primary:hover{background:#5cc2ff}
   .btn-ghost{background:transparent; color:var(--paper); border-color:var(--hair)}
-  .btn-ghost:hover{border-color:var(--brass); color:var(--brass)}
+  .btn-ghost:hover{border-color:var(--blue); color:var(--blue)}
   .btn svg{width:16px;height:16px}
 
   .ph-flag{
     position:absolute; top:10px; left:10px; z-index:2;
-    background:rgba(20,16,14,.82); color:var(--brass); border:1px solid var(--brass);
+    background:rgba(20,16,14,.82); color:var(--blue); border:1px solid var(--blue);
     font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700;
     padding:.3em .6em; border-radius:4px; backdrop-filter:blur(4px);
   }
@@ -70,42 +70,65 @@
     border-bottom:1px solid transparent}
   header.solid .bar{background:rgba(20,16,14,.85); backdrop-filter:blur(12px); border-bottom-color:var(--hair)}
   main section{scroll-margin-top:118px}
-  .brand{display:flex; align-items:center; gap:.55em; font-family:var(--display); font-weight:600; font-size:1.3rem; letter-spacing:.01em; text-decoration:none}
-  .brand-mark{width:26px; height:26px; flex:none}
-  @media(max-width:420px){ .brand{font-size:1.12rem} }
-  .nav{display:flex; align-items:center; gap:2rem}
-  .nav a{font-size:.9rem; font-weight:500; text-decoration:none; color:var(--paper-dim); transition:color .2s}
-  .nav a:hover{color:var(--paper)}
-  .nav .btn{padding:.6em 1.15em; min-height:0}
-  @media(max-width:820px){ .nav a:not(.btn){display:none} .scrollcue{display:none} }
+  .brand{display:flex; align-items:center; text-decoration:none}
+  .brand-logo{width:158px; height:auto; flex:none; display:block}
+  @media(max-width:420px){ .brand-logo{width:126px} }
+  .nav{display:flex; align-items:center; gap:.25rem}
+  .nav a{position:relative; z-index:1; font-size:.9rem; font-weight:500; text-decoration:none; color:var(--paper-dim); transition:color .2s; padding:.5em 1em; border-radius:100px}
+  .nav a:not(.btn):hover{color:var(--paper)}
+  .nav a.active{color:var(--paper)}
+  .nav .btn{padding:.6em 1.15em; min-height:0; margin-left:.75rem}
+  .nav-pill{position:absolute; top:50%; left:0; height:32px; margin-top:-16px; width:0; opacity:0;
+    background:rgba(58,168,255,.12); border:1px solid rgba(58,168,255,.4); border-radius:100px; z-index:0;
+    pointer-events:none; transition:transform .35s cubic-bezier(.2,.7,.2,1), width .35s cubic-bezier(.2,.7,.2,1), opacity .3s ease}
+
+  .nav-burger{display:none; flex-direction:column; justify-content:center; gap:5px; width:38px; height:38px; background:none; border:none; cursor:pointer; padding:0}
+  .nav-burger span{display:block; width:20px; height:2px; margin-inline:auto; background:var(--paper); transition:transform .3s ease, opacity .3s ease}
+  .nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-panel{display:none; flex-direction:column; padding:4px clamp(20px,5vw,48px) 16px; background:rgba(7,11,22,.97); backdrop-filter:blur(12px); border-bottom:1px solid var(--hair)}
+  .mobile-panel.open{display:flex}
+  .mobile-panel a{padding:14px 4px; font-size:1rem; font-weight:500; color:var(--paper-dim); text-decoration:none; border-top:1px solid var(--hair)}
+  .mobile-panel a:first-child{border-top:none}
+  @media(max-width:820px){
+    .nav a:not(.btn){display:none}
+    .nav-pill{display:none}
+    .nav .btn{margin-left:0}
+    .nav-burger{display:flex}
+    .scrollcue{display:none}
+  }
 
   /* HERO */
   .hero{position:relative; min-height:100svh; display:flex; align-items:flex-end; overflow:hidden}
   .hero-wave{position:absolute; inset:0; width:100%; height:100%; z-index:0; opacity:.5}
   .hero-glow{position:absolute; left:50%; top:38%; transform:translate(-50%,-50%); width:min(90vw,900px); height:min(90vw,900px);
-    background:radial-gradient(circle, rgba(213,154,78,.16), transparent 62%); z-index:0; pointer-events:none}
+    background:radial-gradient(circle, rgba(58,168,255,.18), transparent 62%); z-index:0; pointer-events:none}
   .hero .wrap{position:relative; z-index:1; padding-bottom:clamp(64px,10vh,120px); width:100%}
   .hero h1{font-size:clamp(2.9rem,8.5vw,7rem); font-weight:600; max-width:16ch}
-  .hero h1 em{font-style:italic; color:var(--brass); font-weight:500}
+  .hero h1 em{font-style:italic; color:var(--blue); font-weight:500}
   .hero .lead{margin-top:1.4rem}
   .hero-cta{display:flex; gap:.9rem; flex-wrap:wrap; margin-top:2.2rem}
   .hero-eyebrow{display:flex; align-items:center; gap:.8em; margin-bottom:1.5rem}
-  .hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brass);box-shadow:0 0 12px var(--brass)}
+  .hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 12px var(--blue)}
   .scrollcue{position:absolute; left:50%; bottom:26px; transform:translateX(-50%); z-index:1; display:flex; flex-direction:column; align-items:center; gap:.5em; color:var(--paper-faint); font-size:.68rem; letter-spacing:.24em; text-transform:uppercase}
-  .scrollcue .line{width:1px; height:38px; background:linear-gradient(var(--brass),transparent); animation:cue 2.4s ease-in-out infinite}
+  .scrollcue .line{width:1px; height:38px; background:linear-gradient(var(--blue),transparent); animation:cue 2.4s ease-in-out infinite}
   @keyframes cue{0%,100%{opacity:.3; transform:scaleY(.6)}50%{opacity:1; transform:scaleY(1)}}
+  @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(4%,-6%) scale(1.08)}66%{transform:translate(-5%,4%) scale(.96)}}
+  @keyframes drift-slow{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-6%,5%) scale(1.05)}}
 
   /* SIGNATURE */
   .sig{background:var(--stage); position:relative}
   .cut-stage{height:100svh; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden}
-  .cut-stage::before{content:""; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:min(120vw,1100px); height:min(80vh,620px); background:radial-gradient(ellipse at center, rgba(213,154,78,.16), transparent 66%); pointer-events:none; z-index:0}
+  .cut-stage::before{content:""; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:min(120vw,1100px); height:min(80vh,620px); background:radial-gradient(ellipse at center, rgba(58,168,255,.18), transparent 66%); pointer-events:none; z-index:0}
   .sig-svg{width:100%; height:62vh; max-height:560px; display:block; position:relative; z-index:1}
   .sig-label{position:absolute; top:clamp(84px,15vh,150px); left:0; right:0; text-align:center; z-index:2}
-  .sig-count{font-family:var(--display); font-size:clamp(3rem,11vw,7rem); font-weight:500; color:var(--brass); line-height:1; font-variant-numeric:tabular-nums}
+  .sig-count{font-family:var(--display); font-size:clamp(3rem,11vw,7rem); font-weight:500; color:var(--blue); line-height:1; font-variant-numeric:tabular-nums}
   .sig-count small{display:block; font-family:var(--body); font-size:.8rem; letter-spacing:.24em; text-transform:uppercase; color:var(--paper-faint); font-weight:600; margin-top:.7em}
+  .sig-desc{margin-top:.7em; font-family:var(--body); font-size:clamp(.9rem,1.6vw,1.05rem); color:var(--paper-dim); font-weight:500; transition:opacity .25s ease}
   .sig-mission{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; z-index:3; padding:0 6vw; pointer-events:none}
   .sig-mission h2{font-size:clamp(2.2rem,7vw,5.5rem); font-weight:600; max-width:14ch}
-  .sig-mission h2 em{font-style:italic; color:var(--brass)}
+  .sig-mission h2 em{font-style:italic; color:var(--blue)}
   .sig-mission p{margin-top:1.3rem; color:var(--paper-dim); max-width:40ch; font-size:clamp(1rem,1.6vw,1.25rem)}
 
   /* generic reveal */
@@ -118,9 +141,12 @@
   .shead p{margin-top:1.1rem; color:var(--paper-dim)}
 
   /* PROOF */
-  .proof{background:var(--night)}
+  .proof{background:var(--night); position:relative; overflow:hidden}
+  .proof::before{content:""; position:absolute; top:-12%; right:-8%; width:56vw; height:56vw; max-width:640px; max-height:640px;
+    background:radial-gradient(circle, rgba(58,168,255,.14), transparent 70%); pointer-events:none; z-index:0; animation:drift 24s ease-in-out infinite}
+  .proof .wrap{position:relative; z-index:1}
   .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,3vw,40px); margin-top:calc(var(--sy)*.55); border-top:1px solid var(--hair); padding-top:calc(var(--sy)*.45)}
-  .stat .n{font-family:var(--display); font-size:clamp(2.4rem,5vw,3.6rem); font-weight:500; color:var(--brass); line-height:1}
+  .stat .n{font-family:var(--display); font-size:clamp(2.4rem,5vw,3.6rem); font-weight:500; color:var(--blue); line-height:1}
   .stat .l{color:var(--paper-dim); margin-top:.5rem; font-size:.95rem}
   .stat .l sup{color:var(--paper-faint); font-size:.7em}
   @media(max-width:640px){ .stats{grid-template-columns:1fr; gap:24px} }
@@ -137,63 +163,71 @@
 
   /* PROCESS (light section) */
   .process{background:var(--paper); color:var(--ink)}
-  .process .eyebrow{color:var(--rust)}
+  .process .eyebrow{color:var(--indigo)}
   .process .shead p{color:rgba(20,16,14,.66)}
   .steps{margin-top:calc(var(--sy)*.5); display:grid; gap:0}
   .step{display:grid; grid-template-columns:auto 1fr auto; gap:clamp(18px,4vw,56px); align-items:start; padding:clamp(24px,3.4vw,42px) 0; border-top:1px solid rgba(20,16,14,.16); transition:opacity .4s ease}
   .step:last-child{border-bottom:1px solid rgba(20,16,14,.16)}
-  .step .idx{font-family:var(--display); font-size:clamp(1.6rem,3vw,2.4rem); color:var(--rust); font-weight:500; font-variant-numeric:tabular-nums}
+  .step .idx{font-family:var(--display); font-size:clamp(1.6rem,3vw,2.4rem); color:var(--indigo); font-weight:500; font-variant-numeric:tabular-nums}
   .step h3{font-size:clamp(1.4rem,2.6vw,2rem); font-weight:600}
   .step p{margin-top:.6rem; color:rgba(20,16,14,.7); max-width:52ch}
   .step .tick{width:26px;height:26px;border-radius:50%;border:2px solid rgba(20,16,14,.2); display:grid; place-items:center; margin-top:.4rem; transition:all .4s ease}
   .step.active{opacity:1}
   .step:not(.active){opacity:.5}
-  .step.active .tick{background:var(--rust); border-color:var(--rust)}
+  .step.active .tick{background:var(--indigo); border-color:var(--indigo)}
   .step.active .tick svg{opacity:1}
   .step .tick svg{width:13px;height:13px;opacity:0;color:var(--paper);transition:opacity .3s}
   @media(max-width:640px){ .step{grid-template-columns:auto 1fr; } .step .tick{display:none} }
   .process-cta{margin-top:calc(var(--sy)*.5)}
 
   /* PROGRAMMES */
-  .prog{background:var(--night)}
+  .prog{background:var(--night); position:relative; overflow:hidden}
+  .prog::before{content:""; position:absolute; bottom:-16%; left:-10%; width:52vw; height:52vw; max-width:600px; max-height:600px;
+    background:radial-gradient(circle, rgba(88,101,240,.14), transparent 70%); pointer-events:none; z-index:0; animation:drift-slow 26s ease-in-out infinite}
+  .prog .wrap{position:relative; z-index:1}
   .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:calc(var(--sy)*.55)}
   @media(max-width:900px){ .cards{grid-template-columns:repeat(2,1fr)} }
   @media(max-width:460px){ .cards{grid-template-columns:1fr} }
-  .card{background:var(--stage); border:1px solid var(--hair); border-radius:12px; padding:clamp(20px,2.4vw,28px); min-height:180px; display:flex; flex-direction:column; justify-content:space-between; transition:border-color .3s ease, transform .3s ease, background .3s ease}
-  .card:hover{border-color:var(--brass); transform:translateY(-4px)}
+  .card{background:var(--stage); border:1px solid var(--hair); border-radius:12px; padding:clamp(20px,2.4vw,28px); min-height:180px; display:flex; flex-direction:column; justify-content:space-between;
+    position:relative; overflow:hidden; transition:border-color .3s ease, transform .15s ease, background .3s ease}
+  .card::before{content:""; position:absolute; inset:0; opacity:0; transition:opacity .3s ease; pointer-events:none;
+    background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%), rgba(58,168,255,.18), transparent 70%)}
+  .card:hover{border-color:var(--blue); transform:translateY(-4px)}
+  .card:hover::before{opacity:1}
+  .card > *{position:relative; z-index:1}
   .card .tag{font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700; padding:.3em .6em; border-radius:20px; align-self:flex-start}
-  .tag.dj{color:var(--brass); background:rgba(213,154,78,.12)}
-  .tag.pr{color:var(--verd); background:rgba(58,107,100,.16)}
+  .tag.dj{color:var(--blue); background:rgba(58,168,255,.14)}
+  .tag.pr{color:var(--cyan); background:rgba(34,201,214,.16)}
   .card h3{font-size:1.5rem; margin-top:auto; font-weight:600}
   .card .card-sub{color:var(--paper-faint); font-size:.95rem; margin-top:.25rem}
 
   /* CONTACT (light) */
   .contact{background:var(--paper); color:var(--ink)}
-  .contact .eyebrow{color:var(--rust)}
+  .contact .eyebrow{color:var(--indigo)}
   .contact-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:clamp(32px,6vw,80px); margin-top:calc(var(--sy)*.5); align-items:start}
   @media(max-width:820px){ .contact-grid{grid-template-columns:1fr} }
   .contact h2{font-size:clamp(2.2rem,5vw,3.6rem)}
   .contact-lead{margin-top:1.1rem; color:rgba(20,16,14,.7); max-width:42ch}
   .contact-meta{margin-top:2rem; display:flex; flex-direction:column; gap:1rem}
   .cm-row{display:flex; gap:.8em; align-items:center; color:rgba(20,16,14,.8); font-weight:500}
-  .cm-row svg{width:18px;height:18px;color:var(--rust);flex:none}
+  .cm-row svg{width:18px;height:18px;color:var(--indigo);flex:none}
   .form{background:#fff; border:1px solid rgba(20,16,14,.12); border-radius:16px; padding:clamp(22px,3vw,34px); box-shadow:0 20px 50px -30px rgba(20,16,14,.5)}
   .field{margin-bottom:16px}
   .field label{display:block; font-size:.8rem; font-weight:600; letter-spacing:.04em; margin-bottom:.4em; color:rgba(20,16,14,.75)}
   .field input,.field select,.field textarea{width:100%; font-family:var(--body); font-size:1rem; padding:.85em 1em; border:1px solid rgba(20,16,14,.2); border-radius:10px; background:#fbf7ef; color:var(--ink); transition:border-color .2s}
-  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--rust); outline:none}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--indigo); outline:none}
   .form .btn-primary{width:100%; justify-content:center; margin-top:6px; color:var(--paper)}
   .form-fine{font-size:.72rem; color:rgba(20,16,14,.5); margin-top:14px; text-align:center}
 
   /* FOOTER */
   footer{background:var(--night); border-top:1px solid var(--hair); padding-block:calc(var(--sy)*.5)}
   .foot-grid{display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; align-items:flex-start}
-  .foot-brand{font-family:var(--display); font-size:1.6rem; font-weight:600; display:flex; align-items:center; gap:.4em}
-  .foot-mark{width:30px; height:30px; flex:none}
+  .foot-brand{display:flex; align-items:center}
+  .foot-logo{width:172px; height:auto; flex:none; display:block}
   .foot-links{display:flex; gap:2.4rem; flex-wrap:wrap}
   .foot-col h4{font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--paper-faint); font-weight:600; margin-bottom:1em}
   .foot-col a{display:block; text-decoration:none; color:var(--paper-dim); font-size:.92rem; margin-bottom:.6em; transition:color .2s}
-  .foot-col a:hover{color:var(--brass)}
+  .foot-col a:hover{color:var(--blue)}
   .foot-base{margin-top:calc(var(--sy)*.4); padding-top:24px; border-top:1px solid var(--hair); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; color:var(--paper-faint); font-size:.8rem}
 
   /* reduced motion: show end states */
@@ -203,8 +237,10 @@
     .sig-mission{opacity:1 !important}
     .sig-label{opacity:0 !important}
     .step:not(.active){opacity:1}
-    .step .tick{background:var(--rust); border-color:var(--rust)}
+    .step .tick{background:var(--indigo); border-color:var(--indigo)}
     .step .tick svg{opacity:1}
+    .proof::before, .prog::before{animation:none}
+    .card, .btn{transform:none !important; transition:none !important}
   }
 </style>
 </head>
@@ -212,13 +248,39 @@
 
 <header id="hdr">
   <div class="bar">
-    <a href="#top" class="brand"><img src="logo.svg" alt="" class="brand-mark" /> OFFGRD STUDIO</a>
-    <nav class="nav">
-      <a href="#signature">The idea</a>
-      <a href="#programmes">Programmes</a>
-      <a href="#process">How to start</a>
+    <a href="#top" class="brand" aria-label="OFFGRD STUDIOS — home">
+      <svg class="brand-logo" viewBox="0 0 208 72" role="img" aria-label="OFFGRD STUDIOS" focusable="false">
+        <defs><clipPath id="lgClipHeader"><rect x="0" y="0" width="208" height="72" rx="10"/></clipPath></defs>
+        <g clip-path="url(#lgClipHeader)">
+          <rect x="0" y="0" width="102" height="35" fill="var(--blue)"/>
+          <rect x="0" y="35" width="102" height="2" fill="var(--blue)"/>
+          <rect x="0" y="37" width="102" height="35" fill="var(--stage)"/>
+          <rect x="102" y="0" width="4" height="72" fill="var(--blue)"/>
+          <rect x="106" y="0" width="102" height="72" fill="var(--night)"/>
+          <text x="51" y="24" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="19" letter-spacing=".5" fill="var(--night)">OFF</text>
+          <text x="51" y="61" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="19" letter-spacing=".5" fill="var(--blue)">GRD</text>
+          <text x="157" y="41" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="13" letter-spacing="3" fill="var(--paper)">STUDIOS</text>
+          <rect x="180" y="52" width="3" height="8" rx="1.5" fill="var(--blue)"/>
+          <rect x="186" y="47" width="3" height="13" rx="1.5" fill="var(--blue)"/>
+          <rect x="192" y="54" width="3" height="6" rx="1.5" fill="var(--blue)"/>
+        </g>
+      </svg>
+    </a>
+    <nav class="nav" id="mainNav">
+      <span class="nav-pill" id="navPill" aria-hidden="true"></span>
+      <a href="#signature" data-nav>The idea</a>
+      <a href="#programmes" data-nav>Programmes</a>
+      <a href="#process" data-nav>How to start</a>
       <a href="#contact" class="btn btn-primary">Book a trial</a>
     </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobilePanel">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#signature">The idea</a>
+    <a href="#programmes">Programmes</a>
+    <a href="#process">How to start</a>
   </div>
 </header>
 
@@ -246,7 +308,8 @@
   <section class="sig" id="signature">
     <div class="cut-stage">
       <div class="sig-label" id="sigLabel">
-        <div class="sig-count"><span id="voiceCount">1</span><small id="voiceWord">signal</small></div>
+        <div class="sig-count"><span id="voiceCount">1</span><small id="voiceWord">Layer 1</small></div>
+        <p class="sig-desc" id="voiceDesc">The Rhythm Section (Drums &amp; Percussion)</p>
       </div>
       <svg class="sig-svg" id="sigSvg" viewBox="0 0 1200 560" preserveAspectRatio="none" aria-hidden="true"></svg>
       <div class="sig-mission" id="sigMission">
@@ -260,23 +323,23 @@
   <section class="section proof" id="proof">
     <div class="wrap">
       <div class="shead reveal">
-        <span class="eyebrow">Life at OFFGRD STUDIO</span>
+        <span class="eyebrow">Life at OFFGRD STUDIOS</span>
         <h2>Lessons that end in a live set, not a certificate.</h2>
         <p>Students of every age and level share one booth each term — from a first-week beginner to the DJ who closes the night.</p>
       </div>
 
-      <div class="stats reveal">
-        <div class="stat"><div class="n">12</div><div class="l">decks, synths &amp; production tools taught<sup> *sample</sup></div></div>
-        <div class="stat"><div class="n">2</div><div class="l">fully-equipped studio floors, open for practice<sup> *sample</sup></div></div>
-        <div class="stat"><div class="n">2</div><div class="l">showcase nights every term, open to the public<sup> *sample</sup></div></div>
+      <div class="stats">
+        <div class="stat reveal" style="transition-delay:0s"><div class="n">12</div><div class="l">decks, synths &amp; production tools taught<sup> *sample</sup></div></div>
+        <div class="stat reveal" style="transition-delay:.1s"><div class="n">2</div><div class="l">fully-equipped studio floors, open for practice<sup> *sample</sup></div></div>
+        <div class="stat reveal" style="transition-delay:.2s"><div class="n">2</div><div class="l">showcase nights every term, open to the public<sup> *sample</sup></div></div>
       </div>
 
       <div class="gallery">
-        <figure class="gcell a reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="DJ mixing on CDJs under red and purple club lighting" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=900&q=70&auto=format&fit=crop" /></figure>
-        <figure class="gcell b reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Crowd dancing under colorful stage lighting" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=700&q=70&auto=format&fit=crop" /></figure>
-        <figure class="gcell c reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="DJ wearing headphones performing at a club" src="https://images.unsplash.com/photo-1516873240891-4bf014598ab4?w=560&q=70&auto=format&fit=crop" /></figure>
-        <figure class="gcell d reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Close-up of a DJ mixer and turntables lit in neon" src="https://images.unsplash.com/photo-1594623930572-300a3011d9ae?w=560&q=70&auto=format&fit=crop" /></figure>
-        <figure class="gcell e reveal"><span class="ph-flag">Sample</span><img loading="lazy" alt="Crowd with hands raised in a haze of stage smoke" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=560&q=70&auto=format&fit=crop" /></figure>
+        <figure class="gcell a reveal" style="transition-delay:0s"><span class="ph-flag">Sample</span><img loading="lazy" alt="DJ mixing on CDJs under red and purple club lighting" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=900&q=70&auto=format&fit=crop" /></figure>
+        <figure class="gcell b reveal" style="transition-delay:.08s"><span class="ph-flag">Sample</span><img loading="lazy" alt="Crowd dancing under colorful stage lighting" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=700&q=70&auto=format&fit=crop" /></figure>
+        <figure class="gcell c reveal" style="transition-delay:.16s"><span class="ph-flag">Sample</span><img loading="lazy" alt="DJ wearing headphones performing at a club" src="https://images.unsplash.com/photo-1516873240891-4bf014598ab4?w=560&q=70&auto=format&fit=crop" /></figure>
+        <figure class="gcell d reveal" style="transition-delay:.24s"><span class="ph-flag">Sample</span><img loading="lazy" alt="Close-up of a DJ mixer and turntables lit in neon" src="https://images.unsplash.com/photo-1594623930572-300a3011d9ae?w=560&q=70&auto=format&fit=crop" /></figure>
+        <figure class="gcell e reveal" style="transition-delay:.32s"><span class="ph-flag">Sample</span><img loading="lazy" alt="Crowd with hands raised in a haze of stage smoke" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=560&q=70&auto=format&fit=crop" /></figure>
       </div>
     </div>
   </section>
@@ -320,14 +383,14 @@
         <p>Turntables and production taught side by side — many students learn both.</p>
       </div>
       <div class="cards">
-        <article class="card reveal"><span class="tag dj">DJing</span><h3>Turntablism</h3><div class="card-sub">Vinyl, scratching &amp; blends</div></article>
-        <article class="card reveal"><span class="tag dj">DJing</span><h3>Open-Format DJing</h3><div class="card-sub">Reading a room, genre to genre</div></article>
-        <article class="card reveal"><span class="tag dj">DJing</span><h3>Controllerism</h3><div class="card-sub">Pads, loops &amp; live remixing</div></article>
-        <article class="card reveal"><span class="tag dj">DJing</span><h3>Set Building</h3><div class="card-sub">Structuring a night start to finish</div></article>
-        <article class="card reveal"><span class="tag pr">Production</span><h3>Ableton Live</h3><div class="card-sub">Beat-making &amp; arrangement</div></article>
-        <article class="card reveal"><span class="tag pr">Production</span><h3>Sound Design</h3><div class="card-sub">Building your own patches</div></article>
-        <article class="card reveal"><span class="tag pr">Production</span><h3>Synthesis</h3><div class="card-sub">Analog &amp; software synths</div></article>
-        <article class="card reveal"><span class="tag pr">Production</span><h3>Mixing &amp; Mastering</h3><div class="card-sub">Getting a track club-ready</div></article>
+        <article class="card reveal" style="transition-delay:0s"><span class="tag dj">DJing</span><h3>Turntablism</h3><div class="card-sub">Vinyl, scratching &amp; blends</div></article>
+        <article class="card reveal" style="transition-delay:.06s"><span class="tag dj">DJing</span><h3>Open-Format DJing</h3><div class="card-sub">Reading a room, genre to genre</div></article>
+        <article class="card reveal" style="transition-delay:.12s"><span class="tag dj">DJing</span><h3>Controllerism</h3><div class="card-sub">Pads, loops &amp; live remixing</div></article>
+        <article class="card reveal" style="transition-delay:.18s"><span class="tag dj">DJing</span><h3>Set Building</h3><div class="card-sub">Structuring a night start to finish</div></article>
+        <article class="card reveal" style="transition-delay:.24s"><span class="tag pr">Production</span><h3>Ableton Live</h3><div class="card-sub">Beat-making &amp; arrangement</div></article>
+        <article class="card reveal" style="transition-delay:.3s"><span class="tag pr">Production</span><h3>Sound Design</h3><div class="card-sub">Building your own patches</div></article>
+        <article class="card reveal" style="transition-delay:.36s"><span class="tag pr">Production</span><h3>Synthesis</h3><div class="card-sub">Analog &amp; software synths</div></article>
+        <article class="card reveal" style="transition-delay:.42s"><span class="tag pr">Production</span><h3>Mixing &amp; Mastering</h3><div class="card-sub">Getting a track club-ready</div></article>
       </div>
     </div>
   </section>
@@ -343,7 +406,7 @@
           <div class="contact-meta">
             <div class="cm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.9-.9L3 20l1-4.1A8.4 8.4 0 1 1 21 11.5Z"/></svg><span>WhatsApp +961 71 610 379</span></div>
             <div class="cm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.4-7-11a7 7 0 0 1 14 0c0 5.6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Mar Mikhael, Beirut <em style="opacity:.55">· placeholder</em></span></div>
-            <div class="cm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg><span>hello@offgrdstudio.example <em style="opacity:.55">· placeholder</em></span></div>
+            <div class="cm-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg><span>hello@offgrdstudios.example <em style="opacity:.55">· placeholder</em></span></div>
           </div>
         </div>
 
@@ -372,7 +435,24 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand"><img src="logo.svg" alt="" class="foot-mark" /> OFFGRD STUDIO</div>
+        <div class="foot-brand">
+          <svg class="foot-logo" viewBox="0 0 208 72" role="img" aria-label="OFFGRD STUDIOS" focusable="false">
+            <defs><clipPath id="lgClipFooter"><rect x="0" y="0" width="208" height="72" rx="10"/></clipPath></defs>
+            <g clip-path="url(#lgClipFooter)">
+              <rect x="0" y="0" width="102" height="35" fill="var(--blue)"/>
+              <rect x="0" y="35" width="102" height="2" fill="var(--blue)"/>
+              <rect x="0" y="37" width="102" height="35" fill="var(--stage)"/>
+              <rect x="102" y="0" width="4" height="72" fill="var(--blue)"/>
+              <rect x="106" y="0" width="102" height="72" fill="var(--night)"/>
+              <text x="51" y="24" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="19" letter-spacing=".5" fill="var(--night)">OFF</text>
+              <text x="51" y="61" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="19" letter-spacing=".5" fill="var(--blue)">GRD</text>
+              <text x="157" y="41" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="13" letter-spacing="3" fill="var(--paper)">STUDIOS</text>
+              <rect x="180" y="52" width="3" height="8" rx="1.5" fill="var(--blue)"/>
+              <rect x="186" y="47" width="3" height="13" rx="1.5" fill="var(--blue)"/>
+              <rect x="192" y="54" width="3" height="6" rx="1.5" fill="var(--blue)"/>
+            </g>
+          </svg>
+        </div>
         <p class="lead" style="margin-top:1rem; font-size:1rem; max-width:34ch; color:var(--paper-dim)">Mar Mikhael's studio for DJing and electronic music.</p>
       </div>
       <div class="foot-links">
@@ -385,7 +465,7 @@
       </div>
     </div>
     <div class="foot-base">
-      <span>© OFFGRD STUDIO — demo mockup by blkprint. Fictional school, placeholder content.</span>
+      <span>© OFFGRD STUDIOS — demo mockup by blkprint. Fictional school, placeholder content.</span>
       <span>Built with the blkprint pipeline.</span>
     </div>
   </div>
@@ -403,6 +483,72 @@
   const onScrollHdr = () => hdr.classList.toggle('solid', window.scrollY > 40);
   onScrollHdr(); window.addEventListener('scroll', onScrollHdr, {passive:true});
 
+  /* ---------- mobile burger menu ---------- */
+  const navBurger = document.getElementById('navBurger');
+  const mobilePanel = document.getElementById('mobilePanel');
+  navBurger.addEventListener('click', () => {
+    const isOpen = navBurger.getAttribute('aria-expanded') === 'true';
+    navBurger.setAttribute('aria-expanded', String(!isOpen));
+    mobilePanel.classList.toggle('open', !isOpen);
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navBurger.setAttribute('aria-expanded', 'false');
+    mobilePanel.classList.remove('open');
+  }));
+
+  /* ---------- desktop nav scroll-spy pill ---------- */
+  const navLinks = Array.from(document.querySelectorAll('.nav a[data-nav]'));
+  const navPill = document.getElementById('navPill');
+  function movePill(link){
+    if(!link){ navPill.style.opacity = '0'; return; }
+    const navRect = link.parentElement.getBoundingClientRect();
+    const r = link.getBoundingClientRect();
+    navPill.style.opacity = '1';
+    navPill.style.transform = `translateX(${r.left - navRect.left}px)`;
+    navPill.style.width = r.width + 'px';
+  }
+  const spyIO = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if(!e.isIntersecting) return;
+      const link = navLinks.find(a => a.getAttribute('href') === '#' + e.target.id);
+      navLinks.forEach(a => a.classList.toggle('active', a === link));
+      movePill(link);
+    });
+  }, {rootMargin:'-45% 0px -45% 0px', threshold:0});
+  ['signature','programmes','process'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) spyIO.observe(el);
+  });
+  window.addEventListener('resize', () => movePill(navLinks.find(a => a.classList.contains('active'))), {passive:true});
+
+  /* ---------- magnetic buttons ---------- */
+  if(!RM && matchMedia('(hover:hover) and (pointer:fine)').matches){
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width/2) * 0.28;
+        const y = (e.clientY - r.top - r.height/2) * 0.28;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    });
+
+    /* ---------- programme card tilt + glow ---------- */
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width;
+        const py = (e.clientY - r.top) / r.height;
+        card.style.setProperty('--mx', (px*100) + '%');
+        card.style.setProperty('--my', (py*100) + '%');
+        const rx = (py - 0.5) * -8;
+        const ry = (px - 0.5) * 8;
+        card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+      });
+      card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    });
+  }
+
   /* ---------- WhatsApp form ---------- */
   const form = document.getElementById('trialForm');
   form.addEventListener('submit', function(e){
@@ -411,7 +557,7 @@
     const inst = document.getElementById('inst').value;
     const level = document.getElementById('level').value;
     const note = (document.getElementById('note').value||'').trim();
-    let msg = `Hi OFFGRD STUDIO! I'd like to book a trial lesson.%0A• For: ${who}%0A• Interested in: ${inst}%0A• Level: ${level}`;
+    let msg = `Hi OFFGRD STUDIOS! I'd like to book a trial lesson.%0A• For: ${who}%0A• Interested in: ${inst}%0A• Level: ${level}`;
     if(note) msg += `%0A• Note: ${note}`;
     window.open(`https://wa.me/96171610379?text=${msg}`, '_blank', 'noopener');
   });
@@ -430,13 +576,20 @@
 
   // Signal layers for the signature (a single track -> a full set)
   const VOICES = [
-    {c:'#d59a4e', freq:2.4, w:3.2},   // brass
-    {c:'#a24a35', freq:3.6, w:2.4},   // rust
-    {c:'#3a6b64', freq:5.0, w:2.2},   // verdigris
-    {c:'#f3ead9', freq:7.0, w:1.8},   // ivory
-    {c:'#d59a4e', freq:9.0, w:1.5},   // brass high
+    {c:'#3aa8ff', freq:2.4, w:3.2},   // blue — Rhythm
+    {c:'#5865f0', freq:3.6, w:2.4},   // indigo — Bassline
+    {c:'#22c9d6', freq:5.0, w:2.2},   // cyan — Harmony
+    {c:'#eef3fb', freq:7.0, w:1.8},   // paper/ivory — Melody
+    {c:'#8ecbff', freq:9.0, w:1.5},   // sky — FX & Textures
   ];
-  const VOICE_WORDS = ['signal','layers','layers','layers','layers'];
+  const VOICE_WORDS = ['Layer 1','Layer 2','Layer 3','Layer 4','Layer 5'];
+  const VOICE_DESCRIPTIONS = [
+    'The Rhythm Section (Drums & Percussion)',
+    'The Bassline (Low-End)',
+    'The Harmony (Chords & Pads)',
+    'The Melody/Topline (Vocals & Lead)',
+    'The Effects & Textures (FX & Ambience)',
+  ];
 
   function buildLayers(svg, count){
     const NS='http://www.w3.org/2000/svg';
@@ -467,6 +620,8 @@
   const sig = { p:0, settle:0 };           // p: build progress 0..1 ; settle: 0..1 collapse to baseline
   const voiceCountEl = document.getElementById('voiceCount');
   const voiceWordEl  = document.getElementById('voiceWord');
+  const voiceDescEl  = document.getElementById('voiceDesc');
+  let lastVoiceN = 0;
 
   function activeVoices(p){ return Math.max(1, Math.min(VOICES.length, Math.round(1 + p*(VOICES.length-1)))); }
 
@@ -496,8 +651,12 @@
       sigPaths[i].setAttribute('opacity', (act*(0.92 - 0.14*sig.settle)).toFixed(3));
     }
     const n = activeVoices(sig.p);
-    voiceCountEl.textContent = n;
-    voiceWordEl.textContent = VOICE_WORDS[n-1] || 'voices';
+    if(n !== lastVoiceN){
+      voiceCountEl.textContent = n;
+      voiceWordEl.textContent = VOICE_WORDS[n-1] || ('Layer '+n);
+      voiceDescEl.textContent = VOICE_DESCRIPTIONS[n-1] || '';
+      lastVoiceN = n;
+    }
   }
   function frame(ts){
     if(t0===null) t0=ts;

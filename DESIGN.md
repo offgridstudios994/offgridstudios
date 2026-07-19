@@ -1,4 +1,4 @@
-# DESIGN.md — OFFGRD STUDIO · Beirut Music Conservatory
+# DESIGN.md — OFFGRD STUDIOS · Beirut Music Conservatory
 
 > ⚠️ **DEMO MOCKUP — not a real client.** No live business was researched; this is a
 > concept build for the music-school vertical. Per the honesty ledger, **every** name,
@@ -13,7 +13,7 @@
 - **Audience:** Beirut families choosing lessons for children, and adult beginners/returners.
 - **The page's single job:** get a **trial-lesson booking** via WhatsApp/form.
 - **Real content sourced:** none — demo. All content is invented and flagged.
-- **What we must placeholder:** the name (*OFFGRD STUDIO*), all imagery (Unsplash stock, flagged), the +961 WhatsApp number, all counts/quotes.
+- **What we must placeholder:** the name (*OFFGRD STUDIOS*), all imagery (Unsplash stock, flagged), the +961 WhatsApp number, all counts/quotes.
 
 ## [PER-SITE] 2. Tokens
 - **Palette (concert-hall-at-night, NOT the cream/terracotta default):**

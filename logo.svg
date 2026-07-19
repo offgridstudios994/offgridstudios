@@ -1,9 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="OFFGRD STUDIO">
-  <!-- OFFGRD STUDIO mark — equalizer bars. To restyle: change the fill colour
-       or the y/height of each <rect> (bars are centred on y=20). Swap this whole
-       file to use your own logo; it's referenced as logo.svg in index.html. -->
-  <rect x="4"  y="16" width="5" height="8"  rx="2.5" fill="#d59a4e"/>
-  <rect x="12" y="10" width="5" height="20" rx="2.5" fill="#d59a4e"/>
-  <rect x="20" y="4"  width="5" height="32" rx="2.5" fill="#d59a4e"/>
-  <rect x="28" y="13" width="5" height="14" rx="2.5" fill="#d59a4e"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 72" role="img" aria-label="OFFGRD STUDIOS">
+  <!-- OFFGRD STUDIOS mark — a vertically split rectangle: left column stacks
+       OFF (top) over GRD (bottom), right column holds STUDIOS. Mini bars in
+       the corner echo the site's waveform motif. To restyle: change the fill
+       colours below (blue #3aa8ff / stage #101a2c / night #070b16 / paper
+       #eef3fb). Referenced as logo.svg for the favicon; the header/footer use
+       an inline copy of this same mark so it can use CSS variables. -->
+  <clipPath id="lgClip"><rect x="0" y="0" width="208" height="72" rx="10"/></clipPath>
+  <g clip-path="url(#lgClip)">
+    <rect x="0" y="0" width="102" height="35" fill="#3aa8ff"/>
+    <rect x="0" y="35" width="102" height="2" fill="#3aa8ff"/>
+    <rect x="0" y="37" width="102" height="35" fill="#101a2c"/>
+    <rect x="102" y="0" width="4" height="72" fill="#3aa8ff"/>
+    <rect x="106" y="0" width="102" height="72" fill="#070b16"/>
+    <text x="51" y="24" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="19" letter-spacing=".5" fill="#070b16">OFF</text>
+    <text x="51" y="61" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="19" letter-spacing=".5" fill="#3aa8ff">GRD</text>
+    <text x="157" y="41" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="13" letter-spacing="3" fill="#eef3fb">STUDIOS</text>
+    <rect x="180" y="52" width="3" height="8" rx="1.5" fill="#3aa8ff"/>
+    <rect x="186" y="47" width="3" height="13" rx="1.5" fill="#3aa8ff"/>
+    <rect x="192" y="54" width="3" height="6" rx="1.5" fill="#3aa8ff"/>
+  </g>
 </svg>

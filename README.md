@@ -1,4 +1,4 @@
-# OFFGRD STUDIO — website mockup
+# OFFGRD STUDIOS — website mockup
 
 A single-page, self-contained marketing-site mockup for a Beirut music conservatory.
 Built with the blkprint pipeline. **This is a demo:** the name, images, phone number and
@@ -17,7 +17,7 @@ python3 -m http.server 4599
 ```
 
 ## Change the name
-The brand name is plain text — search-and-replace **`OFFGRD STUDIO`** in `index.html`
+The brand name is plain text — search-and-replace **`OFFGRD STUDIOS`** in `index.html`
 (it appears in the header, footer, page title, contact email and the WhatsApp message).
 
 ## Change the logo
