@@ -10,13 +10,13 @@
     <rect x="0" y="0" width="102" height="35" fill="#3aa8ff"/>
     <rect x="0" y="35" width="102" height="2" fill="#3aa8ff"/>
     <rect x="0" y="37" width="102" height="35" fill="#101a2c"/>
-    <rect x="102" y="0" width="4" height="72" fill="#3aa8ff"/>
-    <rect x="106" y="0" width="102" height="72" fill="#070b16"/>
-    <text x="51" y="24" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="19" letter-spacing=".5" fill="#070b16">OFF</text>
-    <text x="51" y="61" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="19" letter-spacing=".5" fill="#3aa8ff">GRD</text>
-    <text x="157" y="41" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="13" letter-spacing="3" fill="#eef3fb">STUDIOS</text>
-    <rect x="180" y="52" width="3" height="8" rx="1.5" fill="#3aa8ff"/>
-    <rect x="186" y="47" width="3" height="13" rx="1.5" fill="#3aa8ff"/>
-    <rect x="192" y="54" width="3" height="6" rx="1.5" fill="#3aa8ff"/>
+    <rect x="75" y="0" width="4" height="72" fill="#3aa8ff"/>
+    <rect x="79" y="0" width="200" height="72" fill="#070b16"/>
+    <text x="39" y="27" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="999" font-size="21" letter-spacing="7" fill="#070b16">OFF</text>
+    <text x="39" y="62" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="999" font-size="21" letter-spacing="5" fill="#3aa8ff">GRD</text>
+    <text x="145" y="41" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="999" font-size="19" letter-spacing="5" fill="#eef3fb">STUDIOS</text>
+    <!-- <rect x="180" y="52" width="3" height="8" rx="1.5" fill="#3aa8ff"/> -->
+    <!-- <rect x="186" y="47" width="3" height="13" rx="1.5" fill="#3aa8ff"/> -->
+    <!-- <rect x="192" y="54" width="3" height="6" rx="1.5" fill="#3aa8ff"/> -->
   </g>
 </svg>
