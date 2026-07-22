@@ -1,22 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 72" role="img" aria-label="OFFGRD STUDIOS">
   <!-- OFFGRD STUDIOS mark — a vertically split rectangle: left column stacks
-       OFF (top) over GRD (bottom), right column holds STUDIOS. Mini bars in
-       the corner echo the site's waveform motif. To restyle: change the fill
-       colours below (blue #3aa8ff / stage #101a2c / night #070b16 / paper
-       #eef3fb). Referenced as logo.svg for the favicon; the header/footer use
-       an inline copy of this same mark so it can use CSS variables. -->
+       OFF (top) over GRD (bottom), right column holds STUDIOS. To restyle:
+       change the fill colours below (blue #3aa8ff / stage #101a2c / night
+       #070b16 / paper #eef3fb). Referenced as the favicon; the header/footer
+       use an inline copy of this same mark so it can use CSS variables. -->
   <clipPath id="lgClip"><rect x="0" y="0" width="208" height="72" rx="10"/></clipPath>
   <g clip-path="url(#lgClip)">
-    <rect x="0" y="0" width="102" height="35" fill="#3aa8ff"/>
-    <rect x="0" y="35" width="102" height="2" fill="#3aa8ff"/>
-    <rect x="0" y="37" width="102" height="35" fill="#101a2c"/>
+    <rect x="0" y="0" width="75" height="35" fill="#3aa8ff"/>
+    <rect x="0" y="35" width="75" height="2" fill="#3aa8ff"/>
+    <rect x="0" y="37" width="75" height="35" fill="#101a2c"/>
     <rect x="75" y="0" width="4" height="72" fill="#3aa8ff"/>
-    <rect x="79" y="0" width="200" height="72" fill="#070b16"/>
-    <text x="39" y="27" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="999" font-size="21" letter-spacing="7" fill="#070b16">OFF</text>
-    <text x="39" y="62" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="999" font-size="21" letter-spacing="5" fill="#3aa8ff">GRD</text>
-    <text x="145" y="41" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="999" font-size="19" letter-spacing="5" fill="#eef3fb">STUDIOS</text>
-    <!-- <rect x="180" y="52" width="3" height="8" rx="1.5" fill="#3aa8ff"/> -->
-    <!-- <rect x="186" y="47" width="3" height="13" rx="1.5" fill="#3aa8ff"/> -->
-    <!-- <rect x="192" y="54" width="3" height="6" rx="1.5" fill="#3aa8ff"/> -->
+    <rect x="79" y="0" width="129" height="72" fill="#070b16"/>
+    <text x="39" y="27" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="21" letter-spacing="7" fill="#070b16">OFF</text>
+    <text x="39" y="62" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="21" letter-spacing="5" fill="#3aa8ff">GRD</text>
+    <text x="145" y="41" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="19" letter-spacing="5" fill="#eef3fb">STUDIOS</text>
   </g>
 </svg>
